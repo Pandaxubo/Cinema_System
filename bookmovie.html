@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style-self.css">
+
+    <title>Book Ticket</title>
+  </head>
+  <body>
+     <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#">Cinema E-booking</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About</a>
+      </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href ="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          My Profile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">User Profile</a>
+          <a class="dropdown-item" href="#">View Order History</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+        
+      <li class="nav-item">
+        <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Sign up</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Enter a movie name" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+      <!-- Navbar ends here -->
+    <div class="book"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4" id="selectedMovie">
+             <img src="b1.jpg">
+            </div>
+            <div class="col" id="bookinfo">
+                <h3>Verify your age</h3>
+                <hr>
+                <p>Please enter your date of birth</p>
+                <div class="form-row">
+		          <div class="form-group col-md-6">
+		          <label>Year</label>
+                 <input type="text" placeholder="YYYY">
+		</div> 
+		      <div class="form-group col-md-6">
+                  <label>Month</label>
+		  <select id="inputMonth">
+		    <option> Choose...</option>
+		      <option>Jan</option>
+		      <option>Feb</option>
+		      <option >Mar</option>
+		      <option>Apr</option>
+		      <option>May</option>
+              <option>Jun</option>
+              <option>Jul</option>
+              <option>Aug</option>
+              <option>Sep</option>
+              <option>Oct</option>
+              <option>Nov</option>
+              <option>Dec</option>
+		  </select>
+		</div> 
+            <button type="button" class="btn btn-secondary">+ Add</button>
+            </div>
+            <hr>
+            <h3>Section selection</h3>
+               <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Movie Date</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th></th>
+                <td>9-1</td>
+                <td>9-2</td>
+                <td>9-3</td>
+                <td>9-4</td>
+                <td>9-5</td>
+                <td>9-6</td>
+                <td>9-7</td>
+            </tr>
+        </tbody>
+        </table>
+        <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Show Times</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th></th>
+                <td>9:00</td>
+                <td>9:30</td>
+                <td>10:00</td>
+                <td>10:30</td>
+                <td>11:30</td>
+                <td>12:00</td>
+                <td>12:30</td>
+                <td>13:00</td>
+                <td>13:30</td> 
+            </tr>
+            <tr>
+                <th></th>
+                <td>14:00</td>
+                <td>14:30</td>
+                <td>15:00</td>
+                <td>15:30</td>
+                <td>16:00</td>
+                <td>16:30</td>
+                <td>17:00</td>
+                <td>17:30</td>
+                <td>18:00</td> 
+            </tr>
+            <tr>
+                <th></th>
+                <td>18:30</td>
+                <td>19:00</td>
+                <td>19:30</td>
+                <td>20:00</td>
+                <td>20:30</td>
+                <td>21:00</td>
+                <td>21:30</td>
+                <td>22:00</td>
+                <td>22:30</td>
+            </tr>
+        </tbody>
+        </table>
+        <hr>
+        <h3>Seat Selection</h3>
+        <p>Please select x seats</p>
+        <div class="text-center">
+        <button type="button" class="btn btn-warning">A1</button>
+        <button type="button" class="btn btn-warning">A2</button>
+        <button type="button" class="btn btn-warning">A3</button>
+        <button type="button" class="btn btn-warning">A4</button>
+        <button type="button" class="btn btn-warning">A5</button>
+        <button type="button" class="btn btn-warning">A6</button>
+        <button type="button" class="btn btn-warning">A7</button>
+        <button type="button" class="btn btn-warning">A8</button>
+        <button type="button" class="btn btn-warning">A9</button>
+                <br>
+        <button type="button" class="btn btn-warning">B1</button>
+        <button type="button" class="btn btn-warning">B2</button>
+        <button type="button" class="btn btn-warning">B3</button>
+        <button type="button" class="btn btn-warning">B4</button>
+        <button type="button" class="btn btn-warning">B5</button>
+        <button type="button" class="btn btn-warning">B6</button>
+        <button type="button" class="btn btn-warning">B7</button>
+        <button type="button" class="btn btn-warning">B8</button>
+        <button type="button" class="btn btn-warning">B9</button>
+                <br>
+        <button type="button" class="btn btn-warning">C1</button>
+        <button type="button" class="btn btn-warning">C2</button>
+        <button type="button" class="btn btn-warning">C3</button>
+        <button type="button" class="btn btn-warning">C4</button>
+        <button type="button" class="btn btn-warning">C5</button>
+        <button type="button" class="btn btn-warning">C6</button>
+        <button type="button" class="btn btn-warning">C7</button>
+        <button type="button" class="btn btn-warning">C8</button>
+        <button type="button" class="btn btn-warning">C9</button>
+                <br>
+        <button type="button" class="btn btn-warning">D1</button>
+        <button type="button" class="btn btn-warning">D2</button>
+        <button type="button" class="btn btn-warning">D3</button>
+        <button type="button" class="btn btn-warning">D4</button>
+        <button type="button" class="btn btn-warning">D5</button>
+        <button type="button" class="btn btn-warning">D6</button>
+        <button type="button" class="btn btn-warning">D7</button>
+        <button type="button" class="btn btn-warning">D8</button>
+        <button type="button" class="btn btn-warning">D9</button>
+                <br>
+        <button type="button" class="btn btn-warning">E1</button>
+        <button type="button" class="btn btn-warning">E2</button>
+        <button type="button" class="btn btn-warning">E3</button>
+        <button type="button" class="btn btn-warning">E4</button>
+        <button type="button" class="btn btn-warning">E5</button>
+        <button type="button" class="btn btn-warning">E6</button>
+        <button type="button" class="btn btn-warning">E7</button>
+        <button type="button" class="btn btn-warning">E8</button>
+        <button type="button" class="btn btn-warning">E9</button>
+                <br>
+        <button type="button" class="btn btn-warning">F1</button>
+        <button type="button" class="btn btn-warning">F2</button>
+        <button type="button" class="btn btn-warning">F3</button>
+        <button type="button" class="btn btn-warning">F4</button>
+        <button type="button" class="btn btn-warning">F5</button>
+        <button type="button" class="btn btn-warning">F6</button>
+        <button type="button" class="btn btn-warning">F7</button>
+        <button type="button" class="btn btn-warning">F8</button>
+        <button type="button" class="btn btn-warning">F9</button>
+                <br>
+        <button type="button" class="btn btn-warning">G1</button>
+        <button type="button" class="btn btn-warning">G2</button>
+        <button type="button" class="btn btn-warning">G3</button>
+        <button type="button" class="btn btn-warning">G4</button>
+        <button type="button" class="btn btn-warning">G5</button>
+        <button type="button" class="btn btn-warning">G6</button>
+        <button type="button" class="btn btn-warning">G7</button>
+        <button type="button" class="btn btn-warning">G8</button>
+        <button type="button" class="btn btn-warning">G9</button>
+                </div>
+        <p>You've selected:</p>
+        <hr>
+        <button type="button" class="btn btn-secondary">Cancel Order</button>
+        <button type="button" class="btn btn-outline-success float-right">Next -></button>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

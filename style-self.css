@@ -1,0 +1,106 @@
+.fullbody{
+    background-color:hsl(0,80%,0%);
+}
+#light{
+    background-color:white;
+}
+.hpbody{
+    margin-left:50px;
+    margin-right:50px;
+    background-color:white;
+}
+#hotmovie
+{
+    height: 650px;
+}
+
+.newMovies
+{
+    margin-bottom: 20px;
+}
+#mailsend{
+    color:green;
+    display:none;
+}
+
+.loginform
+{
+ margin-top: 65px
+}
+
+.form-group.required .control-label:after{
+    content:"*";
+    color:red;
+}
+
+.profile
+{
+    margin-top: 60px;
+}
+
+.book
+{
+    margin-top: 100px;
+}
+
+.checkout
+{
+    margin-top: 70px;
+}
+
+.admin
+{
+    margin-top: 70px;
+}
+
+.userProm
+{
+    margin-top:70px;
+}
+.form-select-uname{
+    display:none;
+}
+#eaform{
+    display:none;
+}
+.form-select-ad{
+    display:none;
+}
+
+.form-popup{
+    display:none;
+    position:fixed;
+    bottom:0;
+    right:15px;
+    border:2px solid black;
+    z-index:9;
+    background:white;
+}
+.form-container{
+    max-width:300px;
+    padding:10px;
+    background:white;
+}
+
+#search{
+    margin-left:300px;
+    margin-right:300px;
+}
+
+#search-btn{
+    width:250px;
+    margin-left:200px;
+}
+
+#searchBody{
+    margin-left:100px;
+    margin-right:100px;
+    background-color: white;
+}
+.movieDetail{
+    margin-top:80px;
+}
+.trailer{
+    margin-left:100px;
+    padding:20px;
+}

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style-self.css">
+
+    <title>Create Account</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Cinema E-booking</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="createAccount.html" tabindex="-1" aria-disabled="true">Create
+                    Account</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="login.html" tabindex="-1" aria-disabled="true">Log in</a>
+            </li>
+        </ul>
+        <button class="btn btn-outline-success my-2 my-sm-0" onclick="window.location.href='movieSearchResult.html'">
+            SearchPage
+        </button>
+    </div>
+</nav>
+<!-- Navbar ends here -->
+<div class="loginform">
+    <div class="col d-flex justify-content-center">
+        <div class="card">
+            <header class="card-header">
+                <a href="login.html" class="float-right btn btn-outline-primary mt-1">Log in</a>
+                <h4 class="card-title mt-2">Registration</h4>
+            </header>
+            <article class="card-body">
+                <form method="post" action="accountCreateinfo.php">
+                    <div class="form-row">
+                        <div class="col form-group required">
+                            <label class="control-label">First name </label>
+                            <input type="text" class="form-control" placeholder="" name="ufname" id="uFname">
+                        </div>
+                        <div class="col form-group required">
+                            <label class="control-label">Last name</label>
+                            <input type="text" class="form-control" placeholder="" name="ulname" id="uLname">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Phone Number</label>
+                        <input type="tel" class="form-control" placeholder="###-###-####" name="uphone" id="uphone">
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Email address</label>
+                        <input type="email" class="form-control" placeholder="" name="uemail" id="uEmail">
+                        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" value="option1">
+                            <span class="form-check-label"> Male </span>
+                        </label>
+                        <label class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" value="option2">
+                            <span class="form-check-label"> Female</span>
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>City</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>State</label>
+                            <select id="inputState" class="form-control">
+                                <option> Choose...</option>
+                                <option>California</option>
+                                <option>Florida</option>
+                                <option selected="">Georgia</option>
+                                <option>Indiana</option>
+                                <option>Texas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Create password</label>
+                        <input class="form-control" type="password" name="upword" id="pword">
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Re-enter password</label>
+                        <input class="form-control" type="password" id="repword">
+                    </div>
+
+                    <script>
+                        var fname = document.getElementById('uFname');//user first name
+                        var lname = document.getElementById('uLname');//user last name
+                        var uphone = document.getElementById('uphone');//user phone number in format: ###-###-####
+                        var email = document.getElementById('uEmail');//user email
+                        var p1 = document.getElementById('pword');//user password
+                        var p2 = document.getElementById('repword');//user re-enter password
+                        var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;//regular expression for email format
+
+                        //Function to check
+                        //if user entered both passwords and passwords match
+                        //if user filled all the required forms
+                        //if user entered a valid email
+
+                        //call this function when user move mouse on "Register" button
+                        function validation() {
+                            if (fname.value == "") {
+                                alert("Please enter your first name")
+                                return false;
+                            } else if (lname.value == "") {
+                                alert("Please enter your last name")
+                                return false;
+                            } else if (uphone.value == "") {
+                                alert("Please enter your phone number")
+                                return false;
+                            } else if (email.value == "" || !re.test(email.value)) {
+                                alert("Please enter your valid email address")
+                                return false;
+                            } else if (p1.value == "") {
+                                alert("Please create a valid password")
+                                return false;
+                            } else if (p2.value == "") {
+                                alert("Pleaser re-enter your password")
+                                return false;
+                            } else if (p2.value == "") {
+                                alert("Pleaser re-enter your password")
+                                return false;
+                            } else if (p1.value != p2.value) {
+                                alert("Passwords Need to Match!")
+                                return false;
+                            } else {
+                                return true;
+                            }
+
+                        }
+                    </script>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="subscribe" value="" id="promotion">
+                        <label class="form-check-label" for="promotion">
+                            I want to receive promotions.
+                        </label>
+                    </div>
+                    <div class="form-group" style="padding-top: 10px">
+                        <button type="submit" class="btn btn-primary btn-block" onmouseover="validation();"
+                                onclick="window.location.href"> Register
+                        </button>
+                    </div> <!-- form-group// -->
+                    <small class="text-muted">By clicking the 'Register' button, you confirm that you accept our <br>
+                        Terms of use and Privacy Policy.</small>
+                </form>
+            </article>
+            <div class="border-top card-body text-center">Have an account? <a href="login.html">Log In</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

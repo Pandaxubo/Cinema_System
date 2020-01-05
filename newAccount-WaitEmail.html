@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style-self.css">
+
+    <title>Registration Confirmation</title>
+</head>
+<body>
+<div class="loginform">
+    <aside class="col-12 d-flex justify-content-center" >
+        <div class="card">
+            <article class="card-body">
+                <h2 class="card-title text-center mb-4 mt-1">One more thing....</h2>
+                <p class="card-title text-center mb-4 mt-1">Confirmation email send</p>
+                <p class="card-title text-center mb-4 mt-1">Please check your Email inbox/junkmail</p>
+                <small>Didn't recieve one?</small>
+                <button id="resend" class="btn btn-outline-success btn-block" onclick="showmsg();">Send again</button>
+                 <p id="mailsend" class="text-center mb-4 mt-1">*  Email send  *</p>
+                
+                <script>
+                    function showmsg(){
+                        document.getElementById('mailsend').style.display="block";
+                    }
+                </script>
+
+            </article>
+        </div>
+    </aside>
+</div>
+
+
+</body>
+</html>

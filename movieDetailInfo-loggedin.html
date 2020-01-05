@@ -1,0 +1,187 @@
+<!doctype html>
+<script type="text/javascript" src="check.php"></script>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style-self.css">
+    <title>Cinema E-booking</title>
+  </head>
+  <body>
+<!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Cinema E-booking</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="homepage-loggedin.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About</a>
+      </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href ="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          My Profile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="profilehome.php">User Profile</a>
+          <a class="dropdown-item" href="#">View Order History</a>
+          <a class="dropdown-item" href="cAccount_Mypromotion.html">View Promotion</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="logout.html">Log Out</a>
+        </div>
+      </li>
+    </ul>
+      <button class="btn btn-outline-success my-2 my-sm-0"
+              onclick="window.location.href='movieSearchResult.html'">
+          SearchPage
+      </button>
+  </div>
+</nav>
+      <!-- Navbar ends here -->
+     
+     <div class="movieDetail">
+         <div class="container">
+             <div class="row">
+             <div class="col-sm-4" id="infoSelectMovie" >
+                 <img src="dm1.jpg">
+                   <br><br>
+                   <button type="button" class="btn btn-success">Book</button>
+                 
+                <br><br>
+                 <div>
+                     <h4>Show Date</h4>
+                      <table class="table">
+        <tbody>
+            <tr>
+                <td>9-1</td>
+                <td>9-2</td>
+                <td>9-3</td>
+                <td>9-4</td>
+            </tr>
+            <tr>
+                <td>9-5</td>
+                <td>9-6</td>
+                <td>9-7</td>
+                <td>9-8</td>
+            </tr>
+        </tbody>
+        </table>
+            <br>
+               <h4>Show Time</h4>
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>9:00</td>
+                <td>10:00</td>
+                <td>11:30</td>
+                <td>12:00</td>
+                <td>13:00</td>
+            </tr>
+            <tr>
+                <td>14:00</td>
+                <td>15:30</td>
+                <td>17:00</td>
+                <td>17:30</td>
+                <td>18:00</td> 
+            </tr>
+            <tr>
+                <td>18:30</td>
+                <td>19:00</td>
+                <td>19:30</td>
+                <td>20:00</td>
+                <td>20:30</td>
+            </tr>
+            <tr>
+                
+                <td>22:00</td>
+                <td>22:30</td>
+            </tr>
+        </tbody>
+        </table>
+                     
+                 </div>
+             </div>
+             <div class="col">
+                 <h1>Aladdin</h1>
+                 <span class="badge badge-secondary">PG</span><br>
+                <span class="badge badge-dark">Musical</span>
+                 <span class="badge badge-dark">Fantasy</span>
+                 <br><br>
+                 <p>When street rat Aladdin frees a genie from a lamp, he finds his wishes granted. However, he soon finds that the evil has other plans for the lamp -- and for Princess Jasmine. But can Aladdin save Princess Jasmine and his love for her after she sees that he isn't quite what he appears to be?</p>
+                 <hr>
+                 <b>Producer</b><p>Walt Disney Pictures, Dan Lin, Jonathan Eirich	</p>
+                 <b>Director</b><p>Guy Ritchie</p>
+                 
+                 <b>Cast</b><p>Will Smith, Mena Massoud, Naomi Scott, Marwan Kenzari, Navid Negahban, Billy Magnussen, Nasim Pedrad, Numan Acar
+                 </p>
+                 <hr>
+                 <div class="trailer">
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/foyufD52aog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 </div>
+                 <div class="trailer-Pic">
+                     <div class="row">
+                        <div class="col">
+                     <img src="mtp1.jpg" alt="..." class="img-thumbnail">
+                         </div>
+                         <div class="col">
+                     <img src="mtp2.jpg" alt="..." class="img-thumbnail">
+                         </div>
+                         <div class="col">
+                     <img src="mtp3.jpg" alt="..." class="img-thumbnail">
+                         </div>
+                     </div>
+                 </div>
+                <hr>
+                 <h4>Review</h4>
+                 <form>
+                    <div class="form-group">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    </div>
+                     <button type="button" class="btn btn-success float-right">Post</button>
+                     <button type="button" class="btn btn-outline-secondary float-right" style="margin-right:10px;">Save</button>
+                </form>
+                 <br><br><br>
+                 <div class="reviews">
+                     <h7><b>User 1</b></h7><br>
+                     <small>Review Date: 6-10-2019</small><br>
+                     <p>
+                         " It's fine... A very straightforward, big spectacle musical."</p>
+                     <small>Like(4) Dislike(0)</small><br>
+                        <button type="button" class="btn btn-outline-success float-left rounded-pill">⇧</button>
+                        <button type="button" class="btn btn-outline-danger float-left rounded-pill" style="margin-left:10px;">⇩</button>
+                     <br>
+                     <br>
+                     <hr>
+                     <h7><b>User 2</b></h7><br>
+                     <small>Review Date: 7-3-2019</small><br>
+                     <p>
+                         " 
+                         There are efforts made, whether through good faith or just market savvy, to update Princess Jasmine into a people's champion who might prefer ruling to romance. Enough to make you wish the Disney people had gone whole hog and just called it Jasmine."</p>
+                     <small>Like(1) Dislike(0)</small><br>
+                        <button type="button" class="btn btn-outline-success float-left rounded-pill">⇧</button>
+                        <button type="button" class="btn btn-outline-danger float-left rounded-pill" style="margin-left:10px;">⇩</button>
+                     
+                 </div>
+
+
+             </div>
+         </div>
+         </div>
+     </div>
+     
+          <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

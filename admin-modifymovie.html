@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link href="style-self.css" rel="stylesheet" type="text/css">
+
+
+    <title>Administrator</title>
+</head>
+<body>
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Cinema E-booking</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="homepage-loggedin.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href ="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    My Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="profilehome.php">User Profile</a>
+                    <a class="dropdown-item" href="#">View Order History</a>
+                    <a class="dropdown-item" href="cAccount_Mypromotion.html">View Promotion</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="logout.html">Log Out</a>
+                </div>
+            </li>
+        </ul>
+        <button class="btn btn-outline-success my-2 my-sm-0"
+                onclick="window.location.href='movieSearchResult.html'">
+            SearchPage
+        </button>
+    </div>
+</nav>
+<!-- Navbar ends here -->
+<div class="admin">
+    <h2 style="margin-left: 30px;margin-bottom: 20px;">Administrator Control Page</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="admin-hp.html">Home</a></li>
+                    <li class="list-group-item"><a href="admin-addmovie.html">Add Movie</a> </li>
+                    <li class="list-group-item"><a href="admin-movieShowTime.html">Schedule Movie</a></li>
+                    <li class="list-group-item active">Modify Movie</li>
+                    <li class="list-group-item"><a href="user-manage.html">Manage Users</a></li>
+                    <li class="list-group-item"><a href="#">View Reviews</a></li>
+                    <li class="list-group-item"><a href="promotionpage.php">Manage Promotion</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Modify Movie</h4>
+                <hr>
+                <form method="post" action="modifyMovie.php">
+                    <div class="col form-group">
+                        <label class="control-label" for="movieID"><h6>Movie ID to Modify</h6></label>
+                        <input class="form-control" id="movieId" name="movieID" type="text">
+                    </div>
+                    <div class="col form-group">
+                        <label class="control-label" for="mName"><h6>Movie Name</h6></label>
+                        <input class="form-control" id="mName" name="mName" type="text">
+                    </div>
+                    <div class="col form-group">
+                        <label class="control-label" for="category"><h6>Category</h6></label>
+                        <input class="form-control" id="category" name="category" type="text">
+                    </div>
+                    <div class="col form-group">
+                        <label class="control-label" for="cast"><h6>Cast</h6></label>
+                        <input class="form-control" id="cast" name="cast" type="text">
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col form-group">
+                                <label class="control-label" for="director"><h6>Director</h6></label>
+                                <input class="form-control" id="director" name="director" type="text">
+                            </div>
+                            <div class="col form-group">
+                                <label class="control-label" for="producer"><h6>Producer</h6></label>
+                                <input class="form-control" id="producer" name="producer" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col form-group">
+                        <label class="control-label" for="mpaa-rating"><h6>MPAA-US Rating</h6></label>
+                        <input class="form-control" id="mpaa-rating" name="mpaa-rating" type="text">
+                    </div>
+                    <div class="col form-group">
+                        <label class="control-label" for="synopsis"><h6>Synopsis</h6></label>
+                        <textarea class="form-control" id="synopsis" name="synopsis" rows="5"></textarea>
+                    </div>
+                    <div class="col form-group">
+                        <label class="control-label" for="trailer-vid"><h6>Trailer Video Link</h6></label>
+                        <input class="form-control" id="trailer-vid" name="trailer-vid" type="text">
+                    </div>
+                    <div class="col form-group">
+                        <label class="control-label" for="trailer-picture1"><h6>Trailer Picture Link</h6></label>
+                        <input class="form-control" id="trailer-picture1" name="trailer-picture1" type="text" placeholder="Pic 1 Link">
+                        <input class="form-control" id="trailer-picture2" name="trailer-picture2" type="text" placeholder="Pic 2 Link">
+                        <input class="form-control" id="trailer-picture3" name="trailer-picture3" type="text" placeholder="Pic 3 Link">
+                    </div>
+                    <div class="col form-group">
+                        <label class="control-label" for="poster-picture"><h6>Poster Picture Link</h6></label>
+                        <input class="form-control" id="poster-picture" name="poster-picture" type="text" placeholder="Poster Picture Link">
+                    </div>
+                    <button class="btn btn-outline-secondary" style="float:right" type="button">Cancel</button>
+                    <button type="submit" class="btn btn-success" style="float:right" onmouseover="modyVali();" >Update</button>
+                </form>
+                <script>
+                    var id=document.getElementById('movieId');
+
+                    function modyVali(){
+                        if (id.value ==""){
+                            alert("Enter ID")
+                            return false;
+                        } else {
+                            return true;
+                        }
+                    }
+                </script>
+                <br>
+                <h4>Delete Movies</h4>
+                <hr>
+                <form method="post" action="deleteMovie.php">
+                    <div class="col form-group">
+                        <label class="control-label" for="deleteMovieName"><h6>Movie Name</h6></label>
+                        <input type="text" class="form-control" id="deleteMovieName" name="deleteMovieName">
+                    </div>
+                    <div id="deletebutton" align="right">
+                        <button type="submit" class="btn btn-danger" style="margin-left:10px;" type="button" onclick="window.location.href='addmin-modifymovie.html'">Delete</button>
+                    </div>
+                </form>
+                <br>
+                <hr>
+                <h4>Manage Movies</h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Select</th>
+                        <th scope="col">Movie ID</th>
+                        <th scope="col">Movie Name</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value=""></div>
+                        </th>
+                        <td>0001</td>
+                        <td>movie 1</td>
+                        <td>
+                            <select class="form-control" id="stat">
+                                <option selected>Publish</option>
+                                <option>Hide from user</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value=""></div>
+                        </th>
+                        <td>0002</td>
+                        <td>movie 2</td>
+                        <td>
+                            <select class="form-control" id="stat">
+                                <option selected>Publish</option>
+                                <option>Hide from user</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value=""></div>
+                        </th>
+                        <td>0003</td>
+                        <td>movie 3</td>
+                        <td>
+                            <select class="form-control" id="stat">
+                                <option selected>Publish</option>
+                                <option>Hide from user</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value=""></div>
+                        </th>
+                        <td>0004</td>
+                        <td>movie 4</td>
+                        <td>
+                            <select class="form-control" id="stat">
+                                <option selected>Publish</option>
+                                <option>Hide from user</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value=""></div>
+                        </th>
+                        <td>0005</td>
+                        <td>movie 5</td>
+                        <td>
+                            <select class="form-control" id="stat">
+                                <option selected>Publish</option>
+                                <option>Hide from user</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value=""></div>
+                        </th>
+                        <td>0006</td>
+                        <td>movie 6</td>
+                        <td>
+                            <select class="form-control" id="stat">
+                                <option selected>Publish</option>
+                                <option>Hide from user</option>
+                            </select>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <button class="btn btn-info float-right" type="button">More Actions</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

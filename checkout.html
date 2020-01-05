@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style-self.css">
+
+    <title>Checkout</title>
+  </head>
+  <body>
+      <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#">Cinema E-booking</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About</a>
+      </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href ="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          My Profile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">User Profile</a>
+          <a class="dropdown-item" href="#">View Order History</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+        
+      <li class="nav-item">
+        <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Sign up</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Enter a movie name" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+      <!-- Navbar ends here -->
+<div class="checkout">
+<article class="card d-flex align-items-center">
+
+<div class="card-body col-md-6 ">
+
+<ul class="nav bg-light nav-pills rounded nav-fill mb-3" role="tablist">
+	<li class="nav-item">
+		<a class="nav-link active" data-toggle="pill" href="#nav-tab-card">
+		<i class="fa fa-credit-card"></i> Credit Card</a></li>
+	<li class="nav-item">
+		<a class="nav-link" data-toggle="pill" href="#nav-tab-paypal">
+		<i class="fab fa-paypal"></i>  Paypal</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane fade show active" id="nav-tab-card">
+    <form method="post" action = "ordercomplete.php">
+    <div class="row">
+       <div class="col-sm-6">
+	   <div class="form-group required">
+		  <label class="control-label"for="uFname">First Name</label>
+		  <input type="text" class="form-control" name="uFname" id="uFname" placeholder="">
+	   </div> 
+       </div>
+       <div class="col-sm-6">
+	   <div class="form-group required">
+		  <label class="control-label" for="uLname">Last Name</label>
+		  <input type="text" class="form-control" name="uLname" id="uLname" placeholder="">
+	   </div> 
+       </div>
+    </div>
+	<div class="form-group required">
+		<label class="control-label" for="cardNumber">Card number</label>
+		<div class="input-group">
+			<input type="text" class="form-control" id ="cardNum" name="cardNum" placeholder="">
+			<div class="input-group-append">
+				<span class="input-group-text text-muted">
+					<i class="fab fa-cc-visa"></i>   <i class="fab fa-cc-amex"></i>   
+					<i class="fab fa-cc-mastercard"></i> 
+				</span>
+			</div>
+		</div>
+	</div> 
+
+	<div class="row">
+	    <div class="col-sm-8">
+	        <div class="form-group required">
+	            <label class="control-label"><span class="hidden-xs">Expiration</span> </label>
+	        	<div class="input-group">
+	        		<input type="text" class="form-control"  placeholder="MM/YY" id="exp" name="exp">
+	        	</div>
+	        </div>
+	    </div>
+	    <div class="col-sm-4">
+	        <div class="form-group required">
+	            <label class="control-label" data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
+	            <input type="text" class="form-control" id="cvv" name="cvv" required="" size="3">
+	        </div> 
+	    </div>
+	</div> 
+         <div class="form-group required">
+		  <label class="control-label" for="bAddress">Billing Address</label>
+		  <input type="text" class="form-control" name="bAddress" id="bAddress" placeholder="">
+	   </div>
+<!--        onmouseover="checkVali();"-->
+        <button class="subscribe btn btn-primary btn-block" onclick="window.location.href='ordercomplete.php'" name = "submit" type="button"> Confirm  </button>
+        
+        <script>
+            var fname = document.getElementById('uFname');
+            var lname = document.getElementById('uLname');
+            var exp = document.getElementById('exp');
+            var cvv = document.getElementById('cvv');
+            var bAdd = document.getElementById('bAddress');
+            
+            function checkVali(){
+                if(fname.value == ""){
+                    alert("Please Enter Your First Name")
+                    return false;
+                }
+                else if(lname.value == ""){
+                    alert("Please Enter Your Last Name")
+                    return false;
+                }
+                else if(exp.value == ""){
+                    alert("Please Enter Your Expiration Date")
+                    return false;
+                }
+                else if(cvv.value == ""){
+                    alert("Please Enter Your CVV")
+                    return false;
+                }
+                else if(bAdd.value == ""){
+                    alert("Please Enter Your Billing Address")
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+            
+        </script>
+        
+        <br>
+        <hr>
+        <h5>Saved Payment</h5>
+         <div class="form-group required">
+	            <label class="control-label" data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">Last 4 digits</label>
+	            <input type="text" class="form-control" id="last4" name="last4" size="4">
+	        </div>
+<!--        onmouseover="savedVali();"-->
+	<button class="subscribe btn btn-primary btn-block" onclick="window.location.href='ordercomplete.php'" name = "submit" type="button" > Confirm  </button>
+        <script>
+            var last4 = document.getElementById('last4');
+            function savedVali(){
+                if (last4.value == ""){
+                    alert("Please Enter The Last 4 Digits Of Your Saved Credit Card Number.")
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+        </script>
+        <hr>
+    <button onclick="window.location.href = 'homepage.html'" type="button" class="btn btn-secondary btn-block">Cancel</button>
+	</form>
+</div> 
+<div class="tab-pane fade" id="nav-tab-paypal">
+<p>Use your Paypal Account to checkout.</p>
+<p>
+<button type="button" class="btn btn-primary"> <i class="fab fa-paypal"></i> Log in my Paypal </button>
+</p>
+</div> 
+</div> 
+
+</div> 
+</article>
+      </div>
+
+ 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

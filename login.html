@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style-self.css">
+
+    <title>Cinema e-Booking Login</title>
+  </head>
+  <body>
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Cinema E-booking</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="#">About</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link active" href="createAccount.html" tabindex="-1" aria-disabled="true">Create Account</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" href="login.html" tabindex="-1" aria-disabled="true">Log in</a>
+              </li>
+          </ul>
+          <button class="btn btn-outline-success my-2 my-sm-0" onclick="window.location.href='movieSearchResult.html'">
+              SearchPage
+          </button>
+      </div>
+  </nav>
+  <!-- Navbar ends here -->
+      
+      <!-- login form starts here -->
+      <!--Email login form-->
+      <div class="loginform">
+      <aside class="col-12 d-flex justify-content-center" >
+    <div class="card">
+    <article class="card-body">
+	<h4 class="card-title text-center mb-4 mt-1">Sign  in</h4>
+    <hr>
+    
+    <!--Email login form-->
+	<form class="form-select-email" action="loginad.php" method="post" id="emailLog">
+    <p class="text-danger text-center">Log in with Email</p>
+	<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+		<input  class="form-control" placeholder="Email login" name="useremail1" type="email">
+	</div> 
+	</div> 
+	<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		 </div>
+	    <input  class="form-control" placeholder="Enter Your Password" name="userpassword1" type="password">
+	</div>
+    </div>
+    <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="rememberme1">
+  <label class="form-check-label" for="promotion">
+    Remeber me
+  </label><br>
+         <small class="text-muted">*Please do not select this if this is not your computer</small>
+        </div>
+                                              
+	<div class="form-group">
+        <br>
+	<button type="submit"  class="btn btn-primary btn-block"> Login  </button>
+	</div> 
+	<p class="text-center"><a href="forgotpword.html" class="btn">Forgot password?</a></p>
+  </form>
+<!--Email login end-->     
+    <hr>
+        <button  class="btn btn-light btn-block" ><a href="createAccount.html">Create Account</a></button>
+	
+</article>
+      </div>
+      </aside>
+      </div>
+    
+      
+    
+      
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
